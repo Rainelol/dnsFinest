@@ -1074,7 +1074,7 @@ function Xerath:EKS(enemy)
 end
 
 function Xerath:ESemi(enemy)
-    if ValidTarget(enemy, EPred.range) and self.Menu.combo.esemi:Value() and self:Checks() and self:QBuffCheck() and self:RBuffCheck() and GetDistance(enemy.pos, mousePos) <= 250 then
+    if ValidTarget(enemy, EPred.range) and self.Menu.combo.esemi:Value() and self:Checks() and self:QBuffCheck() and self:RBuffCheck() then
         local pred = _G.PremiumPrediction:GetPrediction(myHero, enemy, EPred)
         if pred.CastPos and pred.HitChance >= 0.04 and GetDistance(pred.CastPos, myHero.pos) <= EPred.range then
             if pred.CastPos:To2D().onScreen then
